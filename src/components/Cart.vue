@@ -26,7 +26,7 @@
                   Remove
                 </button>
                 <p>
-                  Total Price: <span>₱{{ item.price }}</span>
+                  Total Price: <span>${{ item.price }}</span>
                 </p>
               </div>
             </div>
@@ -35,16 +35,16 @@
             <div class="no-data">No product in shopping cart.</div>
           </div>
           <div v-if="cart.length > 0" class="cart-check-out">
-            <h6>-  Sales Receipt -</h6>
+            <h6> Total </h6>
             <div class="check-out">
               <span v-for="(item, index) in cart" :key="index"
-                >{{ item.title }} x {{ item.quantity }} = ₱{{
+                >{{ item.title }} x {{ item.quantity }} = ${{
                   calculateItemPrice(item)
                 }}</span
               >
             </div>
             <p>
-              Total: <span>₱{{ calculateProduct }}</span>
+              Total: <span>${{ calculateProduct }}</span>
             </p>
           </div>
         </div>
@@ -113,6 +113,8 @@
   }
   
   .check-out span {
+    font-size: 16px;
+    font-weight: 500;
     margin-bottom: 3px;
   }
 
@@ -163,12 +165,12 @@
   }
   
   .cart-widget h4 {
-    font-weight: 400;
-    font-size: 18px;
+    font-weight: 600;
+    font-size: 20px;
   }
   
   .cart-prod-details-con p:nth-child(2) {
-    font-size: 12px;
+    font-size: 15px;
   }
   
   .cart-check-out {

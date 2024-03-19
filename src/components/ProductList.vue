@@ -22,7 +22,7 @@
               <div class="product-header">
                 <h4>{{ product.title }}</h4>
                 <p>
-                  <span>₱{{ product.price }}</span>
+                  <span>${{ product.price }}</span>
                 </p>
               </div>
               <div class="product-desc-con">
@@ -148,15 +148,12 @@ p span {
   border: none;
   border-radius: 4px;
   padding: 10px 30px;
+  color: #ee4d2d;
   background: #ffffff;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 600;
   transition: 0.6s;
   cursor: pointer;
-}
-
-#header .header-con button:hover {
-  color: rgb(238, 77, 45);
 }
 
 #homepage .homepage-con {
