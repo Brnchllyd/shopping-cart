@@ -35,7 +35,7 @@
             <div class="no-data">No product in shopping cart.</div>
           </div>
           <div v-if="cart.length > 0" class="cart-check-out">
-            <h6>-- RECEIPT --</h6>
+            <h6>-  Sales Receipt -</h6>
             <div class="check-out">
               <span v-for="(item, index) in cart" :key="index"
                 >{{ item.title }} x {{ item.quantity }} = ₱{{
@@ -114,6 +114,11 @@
   
   .check-out span {
     margin-bottom: 3px;
+  }
+
+  .no-data {
+    font-size: 20px;
+    font-weight: 700;
   }
   
   .cart-check-out h6 {
@@ -208,7 +213,7 @@
   }
   
   p span {
-    color: #15803d;
+    color: #ee4d2d;
     font-weight: 500;
   }
   
@@ -225,13 +230,13 @@
     filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
       drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
     cursor: pointer;
-    background: #f43f5e;
+    background: rgb(238, 77, 45);
     transition: 0.2s;
   }
   
   .btn-close:hover,
   .btn-remove:hover {
-    background: #e11d48;
+    background: rgb(238, 77, 45);
   }
   
   input::-webkit-outer-spin-button,
@@ -240,7 +245,7 @@
   }
   
   .btn-remove {
-    background: #f43f5e;
+    background: rgb(238, 77, 45);
     color: #ffffff;
     border: none;
     padding: 10px 20px;

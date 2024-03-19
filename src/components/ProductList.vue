@@ -2,8 +2,8 @@
   <section id="header">
     <div class="wrapper">
       <div class="header-con">
-        <h2>Shopping App</h2>
-        <button @click="showCart">My Cart</button>
+        <h2><i class="bi bi-bag-heart-fill"></i> Shopping Cart</h2>
+        <button @click="showCart"><i class="bi bi-cart-check"></i> Cart</button>
       </div>
     </div>
   </section>
@@ -30,7 +30,7 @@
                 <p>{{ product.description }}</p>
               </div>
               <button @click="addToCart(index)">
-                <i class="bi bi-cart4"></i>
+                <i class="bi bi-cart-plus"></i>
                 <span>ADD TO CART</span>
               </button>
             </div>
@@ -101,6 +101,10 @@ body {
   background: #fff;
 }
 
+button i {
+  font-size: 20px;
+}
+
 .backdrop {
   overflow: auto;
   top: 69px;
@@ -111,7 +115,7 @@ body {
 }
 
 p span {
-  color: #15803d;
+  color: #ee4d2d;
   font-weight: 500;
 }
 
@@ -121,7 +125,7 @@ p span {
   width: 100%;
   filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
     drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
-  background: #f43f5e;
+  background: rgb(238, 77, 45);
 }
 
 #header .wrapper {
@@ -142,15 +146,17 @@ p span {
 
 #header .header-con button {
   border: none;
-  background: transparent;
-  color: #ffffff;
-  font-weight: 500;
-  transition: 0.2s;
+  border-radius: 4px;
+  padding: 10px 30px;
+  background: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  transition: 0.6s;
   cursor: pointer;
 }
 
 #header .header-con button:hover {
-  color: #fecdd3;
+  color: rgb(238, 77, 45);
 }
 
 #homepage .homepage-con {
@@ -214,7 +220,7 @@ p span {
 #homepage .product-details h4 {
   font-size: 20px;
   font-weight: 400;
-  height: 60px;
+  height: 50px;
   line-height: 1em;
 }
 
@@ -244,7 +250,7 @@ p::-webkit-scrollbar {
   border-radius: 10px;
   color: #ffffff;
   font-weight: 600;
-  background: #f43f5e;
+  background: rgb(238, 77, 45);
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   font-size: 14px;
@@ -255,6 +261,6 @@ p::-webkit-scrollbar {
 }
 
 #homepage .product-details button:hover {
-  background: #e11d48;
+  background: rgb(238, 77, 45);
 }
 </style>
